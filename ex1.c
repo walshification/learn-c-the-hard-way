@@ -16,6 +16,12 @@ int main(int argc, char *argv[]) // The main function that gets this whole show 
     // this is a one-line comment
     // printf sends a string and any number of variables to stdout
     printf("You are %d miles away.\n", distance);
+    printf(
+        "I will write five more lines of input here. I wonder if there is a way "\
+        "to string lines along as they go.\n"
+    ); // that ^ works!
+    printf("Holy cow, that worked!");
+    printf("I need to add %s more lines,\nso I'll cheat a little.\nMwa ha ha!\n", "two");
 
     // our last statement, which returns a code to our UNIX-based OS that tells
     // it how the execution of the program went. 0 means no errors.
