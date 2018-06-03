@@ -4,3 +4,5 @@
 !*/
 
 zed
+*.dSYM
+!Makefile
