@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h> // for toupper()
 
 int main(int argc, char *argv[])
 {
@@ -11,42 +12,24 @@ int main(int argc, char *argv[])
     int i = 1, j = 0;
     for (i = 1; i < argc; i++) {
         for (j = 0; argv[1][j] != '\0'; j++) {
-            char letter = argv[1][j];
+            char letter = toupper(argv[1][j]);
 
             switch (letter) {
-                case 'a':
                 case 'A':
-                    printf("%d: 'A'\n", j);
-                    break;
-
-                case 'e':
                 case 'E':
-                    printf("%d: 'E'\n", j);
-                    break;
-
-                case 'i':
                 case 'I':
-                    printf("%d: 'I'\n", j);
-                    break;
-
-                case 'o':
                 case 'O':
-                    printf("%d: 'O'\n", j);
-                    break;
-
-                case 'u':
                 case 'U':
-                    printf("%d: 'U'\n", j);
+                    printf("%d: '%c'\n", j, letter);
                     break;
 
-                case 'y':
                 case 'Y':
                     // why i > 2? is this a bug?
                     if (j > 2) {
                         // it's only sometimes Y
                         printf("%d: 'Y'\n", j);
+                        break;
                     }
-                    break;
 
                 default:
                     printf("%d: %c if not a vowel\n", j, letter);
